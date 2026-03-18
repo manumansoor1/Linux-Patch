@@ -1,15 +1,8 @@
-pipeline {
-    agent any
+#!/bin/bash
 
-    stages {
-        stage('Run Patch Script') {
-            steps {
-                echo "START PATCH"
-                sh '''
-                chmod +x patch.sh
-                ./patch.sh
-                '''
-            }
-        }
-    }
-}
+echo "Starting patching..."
+
+sudo dnf clean all
+sudo dnf update -y
+
+echo "Patching completed successfully!"
