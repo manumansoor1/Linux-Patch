@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "START PATCH"
-sudo yum update -y
+sudo dnf update -y
 
 echo "Updating system..."
 uname -r
