@@ -1,9 +1,15 @@
-#!/bin/bash
+pipeline {
+    agent any
 
-echo "START PATCH"
-sudo dnf update -y
-
-echo "Updating system..."
-uname -r
-
-echo "patch completed"
+    stages {
+        stage('Run Patch Script') {
+            steps {
+                echo "START PATCH"
+                sh '''
+                chmod +x patch.sh
+                ./patch.sh
+                '''
+            }
+        }
+    }
+}
