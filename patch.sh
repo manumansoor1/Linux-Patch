@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "START PATCh"
+echo "START PATCH"
 sudo dnf update -y
 
 echo "Updating system..."
