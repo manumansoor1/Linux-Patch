@@ -1,4 +1,4 @@
-sudo dnf install -y httpd
-echo "🚀 Starting Nginx..."
-sudo systemctl enable httpd
-sudo systemctl start httpd
+sudo dnf remove -y httpd
+echo "🚀 Removing Nginx..."
+sudo systemctl edisable httpd
+sudo systemctl status httpd
