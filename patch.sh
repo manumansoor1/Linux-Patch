@@ -6,4 +6,4 @@ sudo yum update -y
 echo "Updating system..."
 uname -r
 
-echo "patch completed successful"
+echo "patch completed"
