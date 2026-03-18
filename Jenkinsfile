@@ -13,10 +13,10 @@ pipeline {
                 chmod +x patch.sh
 
                 echo "Copying script to remote server"
-                scp -i /home/ec2-user/.ssh/id_rsa -o StrictHostKeyChecking=no patch.sh ec2-user@18.61.156.128:/tmp/
+                scp -i /var/lib/jenkins/.ssh/id_rsa -o StrictHostKeyChecking=no patch.sh ec2-user@18.61.156.128:/tmp/
 
                 echo "Executing patch script on remote server"
-                ssh -i /home/ec2-user/.ssh/id_rsa -o StrictHostKeyChecking=no ec2-user@18.61.156.128 "
+                ssh -i /var/lib/jenkins/.ssh/id_rsa -o StrictHostKeyChecking=no ec2-user@18.61.156.128 "
                     chmod +x /tmp/patch.sh && sudo /tmp/patch.sh
                 "
 
