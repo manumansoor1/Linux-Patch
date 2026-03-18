@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Starting patching...."
+echo "Starting patching..."
 
 sudo dnf clean all
 sudo dnf update -y
